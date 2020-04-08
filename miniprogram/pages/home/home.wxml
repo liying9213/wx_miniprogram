@@ -1,0 +1,80 @@
+<!--pages/home/home.wxml-->
+<!-- 字符串 -->
+<view>
+	{{msg}}
+</view>
+<!-- number -->
+<view>
+	{{num}}
+</view>
+<!-- bool -->
+<view>
+	性别：{{isGirl}}
+</view>
+<!-- object -->
+<view>
+	{{person.name}}
+</view>
+<!-- 在标签属性中使用 -->
+<view data-num="{{num}}">自定义标签</view>
+
+<checkbox checked="{{isGirl}}">复选框</checkbox>
+
+<!-- 数字计算 -->
+<view>数字计算:23*34={{23*34}}</view>
+<!-- 字符串拼接 -->
+<view>{{msg+person.name}}</view>
+<!-- 三目运算 -->
+<view>{{num%20 == 0 ? '除尽' : '除不尽'}}</view>
+
+<!-- for -->
+<view>
+循环数组
+<view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id">
+姓名:{{item.name}}
+----
+性别:{{item.sex}}
+</view>
+</view>
+
+<view>
+循环对象
+	<view wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age">
+		值:{{value}}
+		----
+		属性:{{key}}
+	</view>
+</view>
+<!-- block -->
+<view>
+block
+<block 
+wx:for="{{list}}" 
+wx:for-item="item" 
+wx:for-index="index" 
+wx:key="id">
+姓名:{{item.name}}
+----
+性别:{{item.sex}}
+</block>
+</view>
+
+<!-- 条件渲染 -->
+<view>条件渲染</view>
+<view wx:if = "{{true}}" >显示</view>
+<view wx:if = "{{false}}">不显示</view>
+
+<view wx:if = "{{false}}">if</view>
+<view wx:elif = "{{false}}">elseif</view>
+<view wx:else>else</view>
+
+<view hidden="{{true}}">hidden true</view>
+<view hidden="{{false}}">hidden false</view>
+<view>------------------</view>
+<input class="" value="" type="number" password="{{false}}" placeholder="请输入内容" placeholder-style="" placeholder-class="input-placeholder"
+	disabled="{{false}}"  maxlength="10" focus="{{false}}"  bindinput="inputAction" bindfocus="" bindblur="" bindconfirm="">
+</input>
+<view>{{inputValue}}</view>
+<button bindtap="tapAction" data-tag="{{1}}">+</button>
+<button bindtap="tapAction" data-tag="{{2}}">-</button>
+<view class="wxssType">wxss</view>
