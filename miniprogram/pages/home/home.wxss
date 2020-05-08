@@ -5,3 +5,13 @@
   background-color:yellow;
 
 }
+.image{
+  box-sizing: border-box;
+  border: 1px solid #f30d0f;
+  border-radius: 50rpx;
+  width: 200rpx;
+  height: 100rpx;
+}
+.swiper{
+  height:150px;
+}

@@ -49,8 +49,17 @@ Page({
       inputValue : this.data.inputValue+(e.currentTarget.dataset.tag == 1 ? 1 : -1)
     })
   },
-
-
+  swiperAction(e){
+    console.log(e);
+  },
+  radioBindChange(e){
+    console.log(e);
+    
+  },
+  checkboxBindChange(e){
+    console.log(e);
+    
+  },
 
   /**
    * 生命周期函数--监听页面加载

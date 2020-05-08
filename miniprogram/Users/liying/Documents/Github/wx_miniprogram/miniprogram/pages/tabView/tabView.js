@@ -1,4 +1,4 @@
-// pages/register/register.js
+// Users/liying/Documents/Github/wx_miniprogram/miniprogram/pages/tabView/tabView.js
 Page({
 
   /**

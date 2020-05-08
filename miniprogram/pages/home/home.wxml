@@ -78,3 +78,35 @@ wx:key="id">
 <button bindtap="tapAction" data-tag="{{1}}">+</button>
 <button bindtap="tapAction" data-tag="{{2}}">-</button>
 <view class="wxssType">wxss</view>
+
+<!-- Text -->
+<text selectable="{{true}}">this Text widget</text>
+<!-- image -->
+<image class="image" mode="widthFix" lazy-load = "{{true}}" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586422364719&di=fb95b672fb53a4cd95a6e8171c049416&imgtype=0&src=http%3A%2F%2Ffile01.16sucai.com%2Fd%2Ffile%2F2013%2F0617%2F20130617104626550.jpg"></image>
+<!-- swiper -->
+
+<swiper class="swiper" autoplay="true" circular="true"> 
+
+<swiper-item class="" item-id="1" bindtap="swiperAction">
+<image class="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586422364756&di=3afb015a08d320e3a9eb17f4a169f16b&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F75%2F08%2F14300000868259128633084378553.jpg" mode="aspectFill" lazy-load="true" binderror="" bindload="" />
+</swiper-item>
+
+<swiper-item class="" item-id="2" bindtap="swiperAction">
+	<image class="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586422364754&di=69439323d47ff87c79d41a3dd0b9ded3&imgtype=0&src=http%3A%2F%2Fdmimg.5054399.com%2Fallimg%2Fpkm%2Fpmjlq%2F22.jpg" mode="aspectFill" lazy-load="false" binderror="" bindload="" />
+</swiper-item>
+
+</swiper>
+
+<!-- navigator -->
+<navigator url="/pages/index/index">this is navigator</navigator>
+
+<!-- radio -->
+<radio-group bindchange="radioBindChange"> 
+<radio value="male">男</radio>
+<radio value="female">女</radio> 
+</radio-group>
+
+<!-- checkbox -->
+<checkbox-group bindchange="checkboxBindChange">
+<checkbox wx:for-items="{{list}}" wx:key="id" value="{{item.name}}">{{item.name}}</checkbox>
+</checkbox-group>
